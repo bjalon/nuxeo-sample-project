@@ -1,0 +1,3 @@
+ldap.target=.
+nuxeo.default.administrator.group=administrators
+nuxeo.default.administrator.login=Administrator

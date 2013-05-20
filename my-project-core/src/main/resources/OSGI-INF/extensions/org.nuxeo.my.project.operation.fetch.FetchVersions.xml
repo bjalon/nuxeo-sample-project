@@ -1,0 +1,8 @@
+<component name="org.nuxeo.my.project.operation.fetch.FetchVersions">
+
+  <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
+    point="operations" >
+      <operation class="org.nuxeo.my.project.operation.fetch.FetchVersions" />
+   </extension>
+    
+</component>

@@ -1,0 +1,14 @@
+<component name="ro.forwardsoftware.usermanager.contribution">
+
+<require>org.nuxeo.ecm.platform.usermanager.UserManagerImpl</require>
+
+<extension target="org.nuxeo.ecm.platform.usermanager.UserService" point="userManager">
+  <userManager>
+    <defaultAdministratorId>${nuxeo.default.administrator.login}</defaultAdministratorId>
+    <administratorsGroup>${nuxeo.default.administrator.group}</administratorsGroup>
+    <disableDefaultAdministratorsGroup>false</disableDefaultAdministratorsGroup>
+ 
+  </userManager>
+</extension>
+
+</component>

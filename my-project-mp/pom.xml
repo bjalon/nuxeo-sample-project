@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.my.company</groupId>
+    <artifactId>my-project-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <artifactId>my-project-marketplace</artifactId>
+  <packaging>zip</packaging>
+  <name>Marketplace package for My Project</name>
+
+  <dependencies>
+    <!-- TODO: Replace the my-studio-project-name of you studio project here.
+        Studio project name available in Studio UI in:
+        Settings And Versioning > Project Settings > Project ID field -->
+    <dependency>
+      <groupId>nuxeo-studio</groupId>
+      <artifactId>my-studio-project-name</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.my.company</groupId>
+      <artifactId>my-project-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.ecm.platform</groupId>
+      <artifactId>nuxeo-platform-login-portal-sso</artifactId>
+    </dependency>
+  </dependencies>
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.nuxeo.build</groupId>
+        <artifactId>nuxeo-distribution-tools</artifactId>
+        <configuration>
+          <buildFiles>
+            <buildFile>${basedir}/src/main/assemble/assembly.xml</buildFile>
+          </buildFiles>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

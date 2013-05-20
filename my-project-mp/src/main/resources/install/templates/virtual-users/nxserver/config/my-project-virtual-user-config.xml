@@ -1,0 +1,24 @@
+<component name="ro.forwardsoftware.virtual.user.contribution">
+
+<require>org.nuxeo.ecm.platform.usermanager.UserManagerImpl</require>
+
+<extension target="org.nuxeo.ecm.platform.usermanager.UserService" point="userManager">
+  <userManager>
+    <users>
+      <virtualUser id="${nuxeo.default.administrator.login}" searchable="false">
+        <password>${nuxeo.default.administrator.password}</password>
+        <property name="firstName">My Custom</property>
+        <property name="lastName">Administrator</property>
+        <group>${nuxeo.default.administrator.group}</group>
+      </virtualUser>
+      <!--virtualUser id="MyCustomMember" searchable="false">
+        <password>12345678</password>
+        <property name="firstName">My Custom</property>
+        <property name="lastName">Member</property>
+        <group>members</group>
+      </virtualUser--> 
+    </users>
+  </userManager>
+</extension>
+
+</component>
